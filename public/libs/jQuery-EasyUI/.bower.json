@@ -1,0 +1,23 @@
+{
+  "name": "jQuery-EasyUI",
+  "version": "1.5.1",
+  "authors": [
+    "fzrain <fzrain@hotmail.com>"
+  ],
+  "description": "bower for jquery-easyui lib , update form http://www.jeasyui.com/",
+  "main": "jquery.easyui.min.js",
+  "keywords": [
+    "easyui"
+  ],
+  "license": "GPL",
+  "homepage": "https://github.com/fzrain/jQuery-EasyUI",
+  "_release": "1.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.1",
+    "commit": "449af39328457132ed4b32840625f696f9d9c7e5"
+  },
+  "_source": "https://github.com/fzrain/jQuery-EasyUI.git",
+  "_target": "1.5.1",
+  "_originalSource": "jQuery-EasyUI"
+}

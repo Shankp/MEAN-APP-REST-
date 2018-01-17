@@ -1,0 +1,28 @@
+<base href="/">
+<div ng-controller="EventController">
+ <div class="col">
+      <br/>
+    <table class="table">
+       <th>Event Name</th>
+       <th>Event Time</th>
+       <tr ng-repeat="s in names">
+       <td>
+        <div class="" role="tab" id="headingFour">
+         <div class="">
+           <a class="collapsed faq-links" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <i class="fa fa-plus-square-o fa-2x"></i>&nbsp;&nbsp;{{ s.name }}
+           </a>
+         </div>
+        </div>
+       </td>
+       <td>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+         <div class="panel-body">
+           {{s.time.start }}-{{s.time.end }}
+         </div>
+        </div>
+       </td>
+       </tr>
+    </table>
+</div>
+</div>

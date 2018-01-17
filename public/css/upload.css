@@ -1,0 +1,47 @@
+body{
+  background-image: url("../img/background-upload.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  font-family: Roboto, sans-serif;
+  padding: 60px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.68);
+  border-radius: 10px;
+}
+.btn-submit {
+    padding: 0 28px;
+    height: 55px;
+    line-height: 53px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    font-weight: 400;
+    font-family: 'helvetica_neue_lt_pro75_bold',sans-serif;
+}
+.btn-submit-color {
+    color: #fff;
+    border-color: #0275D8;
+    background-color: #0275D8;
+}
+.btn-submit-color:hover {
+    color: #fff;
+    border-color: #FF8900;
+    background-color: #ff8900;
+}

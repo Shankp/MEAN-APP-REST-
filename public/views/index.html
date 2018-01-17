@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <base href="/">
+    <title>Deepl</title>
+
+      <link rel="icon" href="img/logo-ico.png">
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+      <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+      <!-- uikit css -->
+      <link rel="stylesheet" href="libs/uikit/css/uikit.min.css" />
+      <link rel="stylesheet" href="libs/uikit/css/components/slideshow.min.css" />
+      <link rel="stylesheet" href="libs/uikit/css/components/slidenav.css" />
+      <link rel="stylesheet" href="libs/uikit/css/components/dotnav.min.css" />
+
+      <!-- JS -->
+      <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+      <script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
+      <script type="text/javascript" src="libs/jQuery-Plugin-For-Multiple-Table-Row-Selection/jquery.selectable-list.js"></script>
+      <script type="text/javascript" src="libs/jQuery-Plugin-To-Enable-Multi-Rows-Selection-On-Table-Row-Selector/jquery.rowselector.min.js"></script>
+      <script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+      <script type="text/javascript" src="libs/ng-csv/build/ng-csv.min.js"></script>
+      <script type="text/javascript" src="libs/angular-vs-repeat-master/src/angular-vs-repeat.min.js"></script>
+      <script type="text/javascript" src="https://rawgit.com/kamilkp/angular-vs-repeat/master/src/angular-vs-repeat.js"></script>
+      <script type="text/javascript" src="libs/jquery.circlechart.js"></script>
+
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+      <!-- uikit js-->
+      <script src="libs/uikit/js/uikit.min.js"></script>
+      <script src="libs/uikit/js/components/slider.js"></script>
+      <script src="libs/uikit/js/components/slideshow.min.js"></script>
+      <!-- file uploders-->
+      <script type="text/javascript" src="libs/ng-file-upload-bower-10.1.8/ng-file-upload.js"></script>
+      <script type="text/javascript" src="libs/ng-file-upload-bower-10.1.8/ng-file-upload.min.js"></script>
+      <script type="text/javascript" src="libs/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+      <script type="text/javascript" src="libs/angular-file-upload/dist/angular-file-upload.js"></script>
+      <script type="text/javascript" src="libs/angular-file-upload/dist/angular-file-upload.min.js"></script>
+      <!--D3 charts-->
+      <script type="text/javascript" src="libs/d3/d3.js"></script>
+      <script type="text/javascript" src="libs/d3/d3.geom.js"></script>
+      <script type="text/javascript" src="libs/d3/d3.layout.js"></script>
+      <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+      <!--Angular charts-->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+      <!-- ANGULAR CUSTOM -->
+      <script type="text/javascript" src="js/controllers/MainController.js"></script>
+      <script type="text/javascript" src="js/controllers/FileUploaderController.js"></script>
+      <script type="text/javascript" src="js/controllers/EventController.js"></script>
+      <script type="text/javascript" src="js/services/EventService.js"></script>
+      <script type="text/javascript" src="js/appRoutes.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+
+      <!-- Zino-UI css -->
+      <!--<link rel="stylesheet" href="https://static.zinoui.com/1.5/themes/silver/zino.core.css">
+      <link rel="stylesheet" href="https://static.zinoui.com/1.5/themes/silver/zino.splitter.css">-->
+      <!-- Zino-UI js -->
+      <!--<script type="text/javascript" src="https://static.zinoui.com/1.5/compiled/zino.position.min.js"></script>
+      <script type="text/javascript" src="https://static.zinoui.com/1.5/compiled/zino.draggable.min.js"></script>
+      <script type="text/javascript" src="https://static.zinoui.com/1.5/compiled/zino.splitter.min.js"></script>
+      <script type="text/javascript" src="https://static.zinoui.com/js/front.min.js"></script>-->
+
+      <!-- jquery.easyui css-->
+      <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+      <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+      <!-- jquery.easyui js-->
+      <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="../img/logon.png"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <!-- <li ><a href="/">Log</a></li> -->
+            <!--  <li><a href="/home">Home</a></li>
+            <li><a href="/events">Events</a></li>-->
+            <li><a href="/UploadEvents">Upload Files</a></li>
+            <li><a href="/EventWindow">Event Window</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><img src="images/photo.png" class="devsite-user-avatar gc-analytics-event" data-category="" data-label="" tabindex=""></li> -->
+            <!--<li><a href="#"><span class=""></span> JOIN</a></li>
+            <li><a href="#"><span class=""></span> LOG IN</a></li>-->
+          </ul>
+        </div>
+      </nav>
+  </head>
+
+  <body ng-app="EventReplayingApp">
+    <div ng-view></div>
+  </body>
+
+</html>

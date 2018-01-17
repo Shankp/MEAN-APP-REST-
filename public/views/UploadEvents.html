@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/back-groud-upolad.css">
+<link rel="stylesheet" href="css/upload.css"> <!-- custom styles -->
+
+<div ng-controller="FileUploaderController">
+  <div class="center-div" data-uk-scrollspy="{cls:'uk-animation-scale-down',delay:200, repeat: true}">
+    <h1 data-uk-scrollspy="{cls:'uk-animation-slide-left',delay:500, repeat: true}">Upload File:</h1>
+     <form>
+       <!--<input ng-model="csv"  onchange="angular.element(this).scope().fileChanged()"  type="file" accept=".csv" id="fileInput"/>-->
+       <input data-uk-scrollspy="{cls:'uk-animation-slide-left',delay:500, repeat: true}" type="file"  ng-accept="'.json'" id="fileInput">
+       <div align="right">
+         <input data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:500, repeat: true}" class="btn-submit btn-submit-color" type="submit" ng-click="fileChanged()" >
+       </div>
+     </form>
+   </div>
+</div>

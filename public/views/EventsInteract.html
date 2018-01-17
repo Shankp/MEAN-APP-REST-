@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- jquery.easyui css-->
+<link rel="stylesheet" type="text/css" href="libs/jQuery-EasyUI/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="libs/jQuery-EasyUI/themes/icon.css">
+<!-- jquery.easyui js-->
+<script type="text/javascript" src="libs/jQuery-EasyUI/jquery.easyui.min.js"></script>
+<link rel="stylesheet" href="css/event_window.css"> <!-- custom styles -->
+
+<div ng-controller="FileUploaderController">
+  <div class="easyui-layout" style="width:100%;height:585px;">
+      <div data-options="region:'north'" style="height:120px">
+        <div style="margin:10px">
+          <!-- <button type="button" ng-click="ConvertToCSV(events)">Send to CEP</button> -->
+          <!-- <textarea cols="150" rows="5">{{ asd }}</textarea> -->
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="" ng-click="getMaxFromService()" data-uk-scrollspy="{cls:'uk-animation-slide-left',delay:0, repeat: true}">
+                  <div style="" class="w3-card w3-OrangeRed" ng-model="checked">
+                    <i style="color: rgba(256,256,256, 0.4)" class="fa fa-arrow-right" aria-hidden="true"></i>
+                      Max Price - {{numFromMax[0]}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-3 -->
+              <div class="col-lg-3">
+                <div class="" ng-click="getProductOfMaxValue()" data-uk-scrollspy="{cls:'uk-animation-scale-down',delay:0, repeat: true}">
+                  <div style="" class="w3-card w3-container w3-indi-blue" ng-disabled="checked">
+                    <i style="color: rgba(256,256,256, 0.4)" class="fa fa-arrow-right" aria-hidden="true"></i>
+                    Max Value Product - {{ProductOfMax}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-3 -->
+              <div class="col-lg-3" ng-click="getCountFromMaxProductJWS()" data-uk-scrollspy="{cls:'uk-animation-scale-up',delay:0, repeat: true}">
+                <div class="">
+                  <div style="" class="w3-card w3-container w3-sky-blue">
+                    Max Product Count - {{countFromMaxProduct[0]}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-3 -->
+              <div class="col-lg-3" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:0, repeat: true}">
+                <div class="">
+                  <div style="" class="w3-card w3-container w3-Darek-green">
+                    Transaction Count - {{events.length}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+          </div>
+        </div>
+      </div>
+      <div data-options="region:'south',split:true" style="height:100px;" >
+        <div style="margin:10px">
+          <!-- <button type="button" ng-click="ConvertToCSV(events)">Send to CEP</button> -->
+          <!-- <textarea cols="150" rows="5">{{ asd }}</textarea> -->
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="" ng-click="getMinFromService()" data-uk-scrollspy="{cls:'uk-animation-slide-left',delay:0, repeat: true}">
+                  <div style="" class="w3-card w3-container w3-indi-blue">
+                    <i style="color: rgba(256,256,256, 0.4)" class="fa fa-arrow-right" aria-hidden="true"></i>
+                      Min Price - {{numFromMin[0]}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <div class="" ng-click="getProductOfMinValue()" data-uk-scrollspy="{cls:'uk-animation-scale-down',delay:0, repeat: true}">
+                  <div style="" class="w3-card w3-container w3-Lite-blue">
+                    <i style="color: rgba(256,256,256, 0.4)" class="fa fa-arrow-right" aria-hidden="true"></i>
+                    Get Min Value Product - {{ProductOfMin}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4" ng-click="getCountFromMinProductJWS()" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:0, repeat: true}">
+                <div class="">
+                  <div style="" class="w3-card w3-container w3-lite-green">
+                    Get Min Product Count - {{countFromMinProduct[0]}}
+                  </div>
+                </div>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+          </div>
+        </div>
+      </div>
+      <div data-options="region:'east',split:true" title="Pie Charts" style="width:300px;">
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="priceLevel" placeholder="Enter the Price level(LKR)">
+              <span class="input-group-btn">
+                <button class="btn btn-submit-color" ng-click="checkForPriceLevel(priceLevel)" type="button">Check</button>
+              </span>
+        </div>
+        <div class="center-div">
+          <div  id="ssss">
+
+          </div>
+        </div>
+
+        <!--<canvas id="pie" class="chart chart-pie"
+          chart-data="data" chart-labels="labels" chart-options="options" >
+        </canvas>-->
+
+      </div>
+      <div data-options="region:'west',split:true" title="Bar Charts" style="width:400px;">
+          <div class="text_style_left-div" data-uk-scrollspy="{cls:'uk-animation-slide-left',delay:0, repeat: true}">
+        <!--<button  ng-click="getMinFromService()">get Min</button>--->
+          <!-- <button  ng-click="getUniqueProducts()">Prducts</button>
+        <div ng-repeat="sh in countsOfProduct">
+            {{sh.product}}-{{sh.count}}
+            </div> -->
+
+            <div class="input-group">
+                <!-- <input type="text" class="form-control" ng-model="priceLevel" placeholder="Enter the Price level"> -->
+
+                    <button class="btn btn-submit-color" ng-click="getUniqueProducts()" type="button">Genereate Product Distribution</button>
+
+                    <div  id="chartID">
+
+                    </div>
+
+            </div>
+
+
+
+        <!--<br>
+        <button  ng-click="getProductOfMinValue(minFromJWS)">Get Minimum Value Product</button>
+          {{ProductOfMin}}
+        <br>
+        <button ng-click="getMaxFromService()">get Max</button>
+
+        <br>
+        <button  ng-click="getProductOfMaxValue(numFromMax)">Get Maximum Value Product</button>
+          {{ProductOfMax}}
+      <br>
+        <button ng-click="getAvgFromService()">get Avg</button>
+
+        <br>
+        <button ng-click="getCountFromService()">get Count</button>
+        {{numFromCount[0]}}
+        <br>
+        <button ng-click="getCountFromMinProductJWS()">get minimum product Count</button>
+        {{countFromMinProduct[0]}}
+        <br>
+        <button ng-click="getCountFromMaxProductJWS()">get maximum product Count</button>
+        {{countFromMaxProduct[0]}}
+        <br>
+        <br>
+        <br>-->
+
+      <!--  Number of events:{{events.length}}
+        {{dataFromJWS}}
+        Enter the Query String:
+        <button class="btn btn-primary" ng-click="sendQueryToCep(queryString)" type="button">Send Query</button>-->
+        <!--  <br>
+          Enter the Price level:
+          <input type="text" ng-model="priceLevel">
+        <button class="btn btn-primary" ng-click="checkForPriceLevel(priceLevel)" type="button">check price level</button>-->
+        <marquee direction="left">
+          <front class="text_style" >1-doll , 2-pipeline , 3-car , 4-wheelBarrow , 5-PlasticCar , 6-HeadSet , 7-ToyRobot , 8-Breslets </font>
+        </marquee>
+        </div>
+      </div>
+      <div data-options="region:'center',title:'LOG File Information List'">
+        <table class="uk-table uk-table-responsive uk-table-divider" data-uk-scrollspy="{cls:'uk-animation-scale-up',delay:0, repeat: true}">
+          <thead class="container3">
+            <th>select</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Information</th>
+            <th>Product</th>
+            <th>Price(LKR)</th>
+          </thead>
+          <tbody class="container2" vs-repeat data-uk-scrollspy="{cls:'uk-animation-scale-up',delay:0, repeat: true}">
+            <tr bindonce ng-repeat="s in events track by s._id">
+             <!-- <td style="display:none;">{{ s._id }}</td> -->
+             <td><input type="checkbox"  ng-model="s.checked" ng-true-value="1"  ng-false-value="0"></td>
+             <td>{{ ::s.dat }}</td>
+             <td>{{ ::s.tim}}</td>
+             <td>{{ ::s.details}}</td>
+             <td>{{ ::s.product}}</td>
+             <td>{{ ::s.price}}</td>
+            </tr>
+          </tbody>
+         </table>
+         <div class="">
+           <div class="alignleft" align="">
+             <div class="btn-group" data-uk-scrollspy="{cls:'uk-animation-scale-down',delay:0, repeat: true}">
+               <button class="btn btn-submit-color" ng-click="ConvertToCSV(events)" type="button">Send to CEP</button>
+               <button class="btn btn-warning" ng-click="getSelected()">getSelected</button>
+             </div>
+           </div>
+           <div class="alignright" align="">
+             <div class="btn-group" data-uk-scrollspy="{cls:'uk-animation-scale-down',delay:0, repeat: true}">
+               <!-- <button class="btn btn-submit-color" ng-click="ConvertToCSV(events)" type="button">Send to CEP</button> -->
+               <!-- <button class="btn btn-warning" ng-click="getSelected()">getSelected</button> -->
+               <button class="btn btn-danger-01" ng-click="deleteAllData()">Delete</button>
+               <button class="btn btn-success-01" type="button" ng-csv="events" csv-header="['date', 'time', 'information','product','price']" csv-column-order ="['dat','tim','details','product','price']"  filename="Log Data.csv">Download CSV</button>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+</div>
